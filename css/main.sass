@@ -1,0 +1,76 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import fonts
+
+*
+  -webkit-font-smoothing: antialiased
+
+body
+  font: 300 24px "Source Sans Pro", sans-serif
+  margin: 0
+  padding: 0
+  color: #444
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 300
+  margin: 0
+  padding: 0
+
+h1
+  margin-bottom: 0.4em
+
+.subtitle
+  margin-bottom: 1em
+
+main
+  width: 50%
+  min-width: 300px
+  text-align: center
+  margin: 20% auto
+
+.social
+  a
+    font-size: 0
+    text-indent: -100px
+    color: transparent
+    text-align: left
+    text-decoration: none
+    &:before
+      display: inline-block
+      font-size: 24px
+      line-height: 32px
+      text-align: center
+      text-indent: 0
+      color: #ccc
+      font-family: "Stackicons-Social"
+      width: 32px
+      height: 32px
+      border-radius: 16px
+
+    &:hover:before
+      background: #444
+      color: #fff
+
+.social-dribbble:before
+  content: "\e126"
+
+.social-github:before
+  content: "\e186"
+
+.social-email:before
+  content: "\e04f"
+
+.social-twitter:before
+  content: "\e036"
+
+.social-flickr:before
+  content: "\e156"
+
+.social-linkedin:before
+  content: "\e25f"
+
+.social-instagram:before
+  content: "\e226"
