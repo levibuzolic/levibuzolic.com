@@ -1,0 +1,14 @@
+@import '../../styles/constants.scss';
+
+.root {
+  position: relative;
+  z-index: 1;
+  background: $colorBackground;
+  color: $colorText;
+}
+
+.wrapper {
+  composes: wrapper from '../../styles/shared.module.scss';
+
+  padding: 200px 0;
+}

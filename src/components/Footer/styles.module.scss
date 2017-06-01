@@ -1,0 +1,29 @@
+@import '../../styles/constants.scss';
+
+.root {
+  position: relative;
+  z-index: 1;
+  background: $colorBackgroundAlt;
+  color: $colorTextAlt;
+  text-align: center;
+}
+
+.wrapper {
+  composes: wrapper from '../../styles/shared.module.scss';
+
+  overflow: hidden;
+}
+
+.text {
+  display: inline-block;
+  padding: 380px 0 60px 0;
+}
+
+.image {
+  display: inline-block;
+  width: 280px;
+  height: 270px;
+  vertical-align: bottom;
+  margin-bottom: -4px;
+  background: url('../../assets/citadel.svg') no-repeat 50% 50%;
+}

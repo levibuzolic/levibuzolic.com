@@ -1,0 +1,76 @@
+@import '../../styles/constants.scss';
+
+.root {
+  position: relative;
+  z-index: 1;
+  background: $colorBackgroundAlt;
+  color: $colorTextAlt;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content {
+  padding: $sizeHeaderHeight 140px;
+}
+
+.heading {
+  $_spacing: 30px;
+
+  composes: h1 from '../../styles/typography.module.scss';
+
+  position: relative;
+  padding-bottom: $_spacing;
+  margin-bottom: $_spacing;
+
+  span {
+    display: block;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: currentColor;
+  }
+}
+
+.tagline {
+  margin-bottom: 30px;
+
+  span {
+    display: block;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: $colorPrimary;
+  color: $colorTextAlt;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: transform 400ms ease-in-out;
+  transition-property: transform, box-shadow, background-color;
+  will-change: transform, box-shadow, background-color;
+
+  &:hover {
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.8);
+    background-color: lighten($colorPrimary, 3%);
+    transform: scale(1.03);
+  }
+}

@@ -1,0 +1,17 @@
+@import './mixins.scss';
+
+$colorPrimary: #ff7a64;
+$colorSecondary: #242430;
+
+$colorText: $colorSecondary;
+$colorTextAlt: #fff;
+
+$colorBackground: #fbfbfa;
+$colorBackgroundAlt: $colorSecondary;
+$colorBackgroundLight: #fff;
+
+$fontHeading: Montserrat, sans-serif; // Regular, Medium
+$fontBody: 'Roboto Mono', Menlo, monospace; // Regular
+
+$sizeMaxWidth: 1100px;
+$sizeHeaderHeight: 90px;

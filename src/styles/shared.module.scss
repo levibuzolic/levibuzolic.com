@@ -1,0 +1,10 @@
+@import './constants.scss';
+
+.hidetext {
+  @include hidetext;
+}
+
+.wrapper {
+  max-width: $sizeMaxWidth;
+  margin: 0 auto;
+}

@@ -1,0 +1,68 @@
+@import '../../styles/constants.scss';
+
+.root {
+  // position: fixed;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $colorTextAlt;
+}
+
+.wrapper {
+  composes: wrapper from '../../styles/shared.module.scss';
+
+  max-width: $sizeMaxWidth + 200px;
+  display: flex;
+  position: relative;
+  height: $sizeHeaderHeight;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  a {
+    @include hidetext;
+
+    display: block;
+    background: url('../../assets/logo-wordmark.svg') no-repeat 0 0;
+    width: 65px;
+    height: 31px;
+  }
+}
+
+.register {
+  $_background: $colorSecondary;
+
+  display: inline-block;
+  color: $colorTextAlt;
+  text-decoration: none;
+  position: relative;
+  text-shadow: -1px -1px $_background, -1px 0px $_background, -1px 1px $_background, 0px -1px $_background, 0px 0px $_background, 0px 1px $_background, 1px -1px $_background, 1px 0px $_background, 1px 1px $_background;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0.3em;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $colorPrimary;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    transition-property: opacity, transform;
+    transform: scaleX(0);
+    will-change: opacity, transform;
+  }
+
+  &:hover {
+    // color: $colorPrimary;
+
+    &:before {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import './constants.scss';
+
+.heading {
+  font-family: $fontHeading;
+}
+
+.h1 {
+  composes: heading;
+
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.h2 {
+  composes: heading;
+
+  font-size: 40px;
+  line-height: 1.1;
+}

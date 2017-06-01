@@ -1,0 +1,6 @@
+@mixin hidetext {
+  font-size: 0;
+  color: transparent;
+  overflow: hidden;
+  text-indent: -100px;
+}

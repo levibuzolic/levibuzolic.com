@@ -1,0 +1,13 @@
+@import '../../styles/constants.scss';
+
+.root {
+  position: relative;
+  z-index: -1;
+  padding: 1px 0;
+  background: $colorBackgroundAlt;
+  color: $colorTextAlt;
+}
+
+.wrapper {
+  composes: wrapper from '../../styles/shared.module.scss';
+}
