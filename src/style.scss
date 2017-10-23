@@ -1,0 +1,119 @@
+@import './_math.scss';
+@import './_mixins.scss';
+
+$background: #fff;
+$foreground: #000;
+$primary: #25bbb8;
+
+* {
+  @include font-smooth;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12px;
+
+  @include mobile {
+    font-size: 10px;
+  }
+}
+
+body {
+  background: $background;
+  font: 300 1.5rem/1.8 'Open Sans', sans-serif;
+  padding: 10%;
+}
+
+main {
+  max-width: 600px;
+
+  > * {
+    animation: fadeIn 2s linear 0.5s 1 both;
+
+    &:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 1.0s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 2.0s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 2.5s;
+    }
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  font-size: 2rem;
+}
+
+.body {
+  max-width: 500px;
+}
+
+p {
+  margin: 0.2em 0 1.2em 0;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($primary, 10%);
+    text-decoration: underline;
+  }
+}
+
+ul.links {
+  margin: 0 -5px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+@keyframes fadeIn {
+  $_frames: 20;
+
+  @for $i from 0 through $_frames {
+    $_progress: $i / $_frames;
+    #{percentage($_progress)} {
+      opacity: lerp(0, 1, easeOut($_progress, 2));
+      transform: translateX(lerp(20px, 0px, easeOut($_progress, 6)));
+    }
+  }
+}

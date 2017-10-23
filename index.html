@@ -1,12 +1,35 @@
----
-layout: holding
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="language" content="en-au">
 
-<h1>Levi Buzolic</h1>
-<div class="subtitle">Software Developer, Designer and Photographer based in Melbourne, Australia</div>
+    <title>Levi Buzolic</title>
+    <meta name="description" content="">
 
-<div class="social">
-  {% for link in site.data.links %}
-    <a href="{{ link.href }}" class="social-{{ link.name }}" title="{{ link.title }}">{{ link.title }}</a>
-  {% endfor %}
-</div>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+    <link href="./build/style.css" rel=stylesheet />
+  </head>
+  <body>
+    <main>
+      <h1>Levi Buzolic</h1>
+      <section class="intro">
+        <p>Thing maker, software developer, designer, and photographer based in Melbourne,&nbsp;Australia.</p>
+      </section>
+      <section class="body">
+        <p>I’ve been designing and developing things for the internet for over 10 years. I currently work with the talented people at <a href="https://ferocia.com.au/">Ferocia</a> building <a href="https://alt.com.au">Alt</a>, an alternative to your current bank.</p>
+      </section>
+      <ul class="links">
+        <li><a href="https://github.com/levibuzolic">GitHub</a></li>
+        <li><a href="https://instagram.com/levibuzolic">Instagram</a></li>
+        <li><a href="https://twitter.com/levibuzolic">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/levibuzolic/">LinkedIn</a></li>
+        <li><a href="https://dribbble.com/levibuzolic">Dribbble</a></li>
+        <li><a href="https://www.strava.com/athletes/150472">Strava</a></li>
+        <li><a href="mailto:levibuzolic@gmail.com">Email</a></li>
+      </ul>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+$pi: 3.14159265359;
+$_precision: 10;
+
+@function pow($base, $exp) {
+  $value: $base;
+  @if $exp > 1 {
+    @for $i from 2 through $exp {
+      $value: $value * $base;
+    }
+  }
+  @if $exp < 1 {
+    @for $i from 0 through -$exp {
+      $value: $value / $base;
+    }
+  }
+  @return $value;
+}
+
+@function fact($num) {
+  $fact: 1;
+  @if $num > 0 {
+    @for $i from 1 through $num {
+      $fact: $fact * $i;
+    }
+  }
+  @return $fact;
+}
+
+@function _to_unitless_rad($angle) {
+  @if unit($angle) == "deg" {
+    $angle: $angle / 180deg * $pi;
+  }
+  @if unit($angle) == "rad" {
+    $angle: $angle / 1rad;
+  }
+  @return $angle;
+}
+
+@function sin($angle) {
+  $a: _to_unitless_rad($angle);
+  $sin: $a;
+  @for $n from 1 through $_precision {
+    $sin: $sin + (pow(-1, $n) / fact(2 * $n + 1)) * pow($a,  (2 * $n + 1));
+  }
+  @return $sin;
+}
+
+@function cos($angle) {
+  $a: _to_unitless_rad($angle);
+  $cos: 1;
+  @for $n from 1 through $_precision {
+    $cos: $cos + (pow(-1, $n) / fact(2*$n)) * pow($a, 2*$n);
+  }
+  @return $cos;
+}
+
+@function tan($angle) {
+  @return sin($angle) / cos($angle);
+}
+
+@function spring-wobbly($t) {
+  @return -0.5 * pow(2.71828, (-6 * $t)) * (-2 * pow(2.71828, (6 * $t)) + sin(12 * $t) + 2 * cos(12 * $t));
+}
+
+@function lerp($_from, $_to, $_progress) {
+  @return $_from + $_progress * ($_to - $_from);
+}
+
+@function easeIn($_value, $_power: 1) {
+  @return pow($_value, $_power);
+}
+
+@function easeOut($_value, $_power: 1) {
+  @return 1 - abs(pow($_value - 1, $_power));
+}
+
+@function easeInOut($_value, $_power: 1) {
+  @if $_value < 0.5 {
+    @return easeIn($_value * 2, $_power) / 2;
+  } @else {
+    @return easeOut($_value * 2 - 1, $_power) / 2 + 0.5;
+  }
+}
+
+@function linear($_value) {
+  @return easeInOut($_value, 1);
+}
+
+@function easeInQuad($_value) {
+  @return easeIn($_value, 2);
+}
+
+@function easeOutQuad($_value) {
+  @return easeOut($_value, 2);
+}
+
+@function easeInOutQuad($_value) {
+  @return easeInOut($_value, 2);
+}
+
+@function easeInCubic($_value) {
+  @return easeIn($_value, 3);
+}
+
+@function easeOutCubic($_value) {
+  @return easeOut($_value, 3);
+}
+
+@function easeInOutCubic($_value) {
+  @return easeInOut($_value, 3);
+}
+
+@function easeInQuart($_value) {
+  @return easeIn($_value, 4);
+}
+
+@function easeOutQuart($_value) {
+  @return easeOut($_value, 4);
+}
+
+@function easeInOutQuart($_value) {
+  @return easeInOut($_value, 4);
+}
+
+@function easeInQuint($_value) {
+  @return easeIn($_value, 5);
+}
+
+@function easeOutQuint($_value) {
+  @return easeOut($_value, 5);
+}
+
+@function easeInOutQuint($_value) {
+  @return easeInOut($_value, 5);
+}
