@@ -1,8 +1,8 @@
 @import './_math.scss';
 @import './_mixins.scss';
 
-$background: #000;
-$foreground: #fff;
+$background: #f8f8f8;
+$foreground: #000;
 $primary: #25bbb8;
 
 * {
@@ -80,6 +80,7 @@ p {
 a {
   color: $primary;
   text-decoration: none;
+  transition: color 200ms ease-in-out;
 
   &:hover {
     color: lighten($primary, 10%);
@@ -106,6 +107,12 @@ ul.links {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    color: mix($foreground, $background, 20%);
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
   }
 }
 
