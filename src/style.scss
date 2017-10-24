@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  color: $foreground;
   background: $background;
   font: 300 1.5rem/1.8 'Open Sans', sans-serif;
   padding: 10%;
@@ -64,12 +65,12 @@ h1 {
 
 .intro {
   font-size: 2rem;
-  color: #222;
+  color: mix($foreground, $background, 85%);
 }
 
 .body {
   max-width: 500px;
-  color: #444;
+  color: mix($foreground, $background, 75%);
 }
 
 p {
@@ -81,7 +82,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: darken($primary, 10%);
+    color: lighten($primary, 10%);
     text-decoration: underline;
   }
 }
