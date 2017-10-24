@@ -5,6 +5,9 @@
   "repository": "git@github.com:levibuzolic/levibuzolic.github.io.git",
   "author": "Levi Buzolic <levibuzolic@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "scripts": {
     "start": "gulp",
     "build": "gulp build"

@@ -7,7 +7,7 @@ const {noop} = require('gulp-util');
 const livereload = require('gulp-livereload');
 const cleanCSS = require('gulp-clean-css');
 
-const DEST = './build/';
+const DEST = './public/';
 let isProd = false;
 
 gulp.task('css', () => gulp
