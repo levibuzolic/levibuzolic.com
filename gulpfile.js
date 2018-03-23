@@ -9,6 +9,9 @@ const connect = require('gulp-connect');
 const ejs = require('gulp-ejs');
 const autoprefixer = require('gulp-autoprefixer');
 const htmlmin = require('gulp-htmlmin');
+const {inlineSource} = require('inline-source');
+const fs = require('fs');
+const path = require('path');
 
 const DEST = './public/';
 let isProd = false;
@@ -78,5 +81,16 @@ gulp.task('connect', function() {
 
 gulp.task('production', () => isProd = true);
 
-gulp.task('build', ['production', 'html', 'css', 'js', 'img', 'fonts']);
 gulp.task('default', ['watch', 'html', 'css', 'js', 'img', 'fonts', 'connect']);
+gulp.task('build', ['production', 'html', 'css', 'js', 'img', 'fonts'], () => {
+  const htmlFile = path.resolve(path.join(DEST, 'index.html'));
+  inlineSource(htmlFile, {
+    rootpath: path.resolve(DEST),
+    attribute: false,
+    saveRemote: false,
+    ignore: ['js', 'png', 'svg']
+  }).then(html => {
+    console.log('CSS inlined')
+    fs.writeFileSync(htmlFile, html)
+  });
+});
