@@ -1,51 +1,40 @@
 @import './_math.scss';
 @import './_mixins.scss';
 
-$bgPrimary: #C33764;
-$bgSecondary: #1d2671;
-
-$background: #f8f8f8;
+$backgroundColor: #000;
+$secondaryColor: #ff0052;
 $text: #fff;
-$highlight: #ff0052;
 
 $font: AG, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial,sans-serif;
+
+$easing: cubic-bezier(0, 0.8, 0.2, 1);
 
 body, html {
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 html {
   font-size: 12px;
 
   @include mobile {
-    font-size: 10px;
+    font-size: 6px;
   }
 }
 
 body {
   color: $text;
-  background: $bgPrimary;
-  font: normal 1.5rem/1.8 $font;
+  background: $backgroundColor;
+  font: normal 2.2rem/1.8 $font;
   padding: 10%;
 }
 
-.rise {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, $bgPrimary 0%, $bgSecondary 100%);
-  animation: fadeIn 4s linear 0s 1 both;
-  opacity: 0;
-}
-
 main {
-  max-width: 600px;
+  max-width: 800px;
 
   > * {
-    animation: slideIn 2s linear 0.5s 1 both;
+    animation: slideIn 4s linear 0.5s 1 both;
 
     &:nth-child(1) {
       animation-delay: 0.5s;
@@ -69,18 +58,14 @@ main {
   }
 }
 
-h1 {
-  font-size: 3rem;
-  margin: 0;
-  padding: 0;
-}
-
 .intro {
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .body {
-  max-width: 500px;
+  max-width: 700px;
 }
 
 p {
@@ -92,53 +77,28 @@ a {
   color: $text;
   text-decoration: none;
   transition: color 200ms ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: rgba($secondaryColor, 0.5);
 
   &:after {
     content: '';
     position: absolute;
     z-index: -1;
     bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: $highlight;
+    top: 0;
+    left: -2px;
+    right: -2px;
+    height: auto;
+    border-radius: 2px;
+    background: $secondaryColor;
+    opacity: 0;
   }
 
   &:hover {
+    text-decoration: none;
+
     &:after {
-      color: $text;
-      top: 0;
-      left: -2px;
-      right: -2px;
-      height: auto;
-      border-radius: 2px;
-    }
-  }
-}
-
-ul.links {
-  margin: 0 -5px;
-  padding: 0;
-  list-style: none;
-
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline-block;
-  }
-
-  a {
-    display: inline-block;
-    padding: 5px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: mix($text, $background, 20%);
-
-    &:hover {
-      color: $highlight;
-      text-decoration: none;
+      opacity: 1;
     }
   }
 }
@@ -150,16 +110,10 @@ ul.links {
     $_progress: $i / $_frames;
     #{percentage($_progress)} {
       opacity: lerp(0, 1, easeOut($_progress, 2));
-      transform: translateX(lerp(20px, 0px, easeOut($_progress, 6)));
+      transform: translateY(lerp(20px, 0px, easeOut($_progress, 6)));
     }
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+@include font('AG', 400, normal, 'AG');
+@include font('AG', 700, normal, 'AG-B');

@@ -69,6 +69,7 @@ gulp.task('fonts', () => gulp
 gulp.task('watch', () => {
   gulp.watch('src/**/*.{css,sass,scss}', ['css']);
   gulp.watch('src/**/*.js', ['js']);
+  gulp.watch('src/**/*.ejs', ['html']);
 });
 
 gulp.task('connect', function() {
