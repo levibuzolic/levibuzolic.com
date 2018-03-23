@@ -8,6 +8,8 @@ $background: #f8f8f8;
 $text: #fff;
 $highlight: #ff0052;
 
+$font: AG, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial,sans-serif;
+
 body, html {
   margin: 0;
   padding: 0;
@@ -24,7 +26,7 @@ html {
 body {
   color: $text;
   background: $bgPrimary;
-  font: normal 1.5rem/1.8 'Roboto', sans-serif;
+  font: normal 1.5rem/1.8 $font;
   padding: 10%;
 }
 
