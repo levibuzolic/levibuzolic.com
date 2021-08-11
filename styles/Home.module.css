@@ -1,0 +1,55 @@
+.main {
+  max-width: 800px;
+}
+
+.main section {
+  animation: slideIn 4s cubic-bezier(0, 0.5, 0, 1) 0.5s 1 both, fadeIn 4s linear 0.5s 1 both;
+}
+
+.main section:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.main section:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.main section:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.main section:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.main section:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+.intro {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.body {
+  max-width: 700px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
