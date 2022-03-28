@@ -12,7 +12,6 @@ export default class CustomDocument extends Document {
             name="description"
             content="Thing maker, software developer, designer, and photographer based in Melbourne, Australia."
           />
-          <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
           <meta name="language" content="en-au" />
           <link rel="icon" href="/favicon.ico" />
           <link
