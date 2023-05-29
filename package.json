@@ -17,7 +17,7 @@
     "@types/node": "^18.14.6",
     "@types/react": "^18.0.21",
     "eslint": "^8.25.0",
-    "eslint-config-next": "^13.2.4",
+    "eslint-config-next": "^13.4.4",
     "prettier": "^2.7.1",
     "typescript": "^5.0.4"
   }
