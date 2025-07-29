@@ -1,24 +1,23 @@
 {
-  "name": "levibuzolic",
-  "version": "1.0.0",
-  "private": true,
+  "name": "new",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "dependencies": {
-    "next": "^15.4.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "astro": "^5.12.4"
   },
   "devDependencies": {
-    "@types/node": "^24.1.0",
-    "@types/react": "^19.1.8",
-    "eslint": "^9.32.0",
-    "eslint-config-next": "^15.4.4",
-    "prettier": "^3.6.2",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/vercel": "^8.2.3",
     "typescript": "^5.8.3"
   }
 }

@@ -47,7 +47,6 @@ p {
 a {
   position: relative;
   color: rgb(var(--text-color));
-  text-decoration: none;
   transition: color 200ms ease-in-out;
   text-decoration: underline;
   text-decoration-color: rgba(var(--secondary-color), 0.5);
