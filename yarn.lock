@@ -22,6 +22,11 @@
   resolved "https://registry.yarnpkg.com/@astrojs/internal-helpers/-/internal-helpers-0.7.1.tgz#50ce657c415b18b88369e9c6eeb12da208783905"
   integrity sha512-7dwEVigz9vUWDw3nRwLQ/yH/xYovlUA0ZD86xoeKEBmkz9O6iELG1yri67PgAPW6VLL/xInA4t7H0CK6VmtkKQ==
 
+"@astrojs/internal-helpers@0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@astrojs/internal-helpers/-/internal-helpers-0.7.3.tgz#3e991ef509ee20cf425fd1ae87da9f97e8dbb3de"
+  integrity sha512-6Pl0bQEIChuW5wqN7jdKrzWfCscW2rG/Cz+fzt4PhSQX2ivBpnhXgFUCs0M3DCYvjYHnPVG2W36X5rmFjZ62sw==
+
 "@astrojs/language-server@^2.15.0":
   version "2.15.4"
   resolved "https://registry.yarnpkg.com/@astrojs/language-server/-/language-server-2.15.4.tgz#9c2eeb64e4b9df9a52f19c6bfdce5397b8dba094"
@@ -93,18 +98,18 @@
     is-wsl "^3.1.0"
     which-pm-runs "^1.1.0"
 
-"@astrojs/vercel@^8.2.5":
-  version "8.2.5"
-  resolved "https://registry.yarnpkg.com/@astrojs/vercel/-/vercel-8.2.5.tgz#c7a76a243b77d8606d1e3cff19f5ae78077216bd"
-  integrity sha512-SXD3CKKsxPuAe9Fd9PEOjnX/hSpSq4fM7uQ4sz6R1g2MgkX8bwkshz0qRDUx4744GSfCn/J2nDlTV/aJUkhHkA==
+"@astrojs/vercel@^8.2.8":
+  version "8.2.8"
+  resolved "https://registry.yarnpkg.com/@astrojs/vercel/-/vercel-8.2.8.tgz#0fd59c3190bb32950fbe1816c1534a581ffb8b0f"
+  integrity sha512-Bp5kHSoHoMHNWy0CIWNOfcSsOaU3fL31BbGGb6Hu05oeRWE+s24z5zS641DJwPndat7Wag+x1d2PNbraQeag+w==
   dependencies:
-    "@astrojs/internal-helpers" "0.7.1"
+    "@astrojs/internal-helpers" "0.7.3"
     "@vercel/analytics" "^1.5.0"
-    "@vercel/functions" "^2.2.2"
-    "@vercel/nft" "^0.29.2"
-    "@vercel/routing-utils" "^5.0.4"
+    "@vercel/functions" "^2.2.13"
+    "@vercel/nft" "^0.30.1"
+    "@vercel/routing-utils" "^5.1.1"
     esbuild "^0.25.0"
-    tinyglobby "^0.2.13"
+    tinyglobby "^0.2.15"
 
 "@astrojs/yaml2ts@^0.2.2":
   version "0.2.2"
@@ -712,7 +717,7 @@
   dependencies:
     "@types/unist" "*"
 
-"@types/ms@*":
+"@types/ms@*", "@types/ms@2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@types/ms/-/ms-2.1.0.tgz#052aa67a48eccc4309d7f0191b7e41434b90bb78"
   integrity sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==
@@ -746,17 +751,17 @@
   resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-1.5.0.tgz#073f93694897414b21a8495e2619bbf64447dcaa"
   integrity sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g==
 
-"@vercel/functions@^2.2.2":
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/@vercel/functions/-/functions-2.2.7.tgz#9f994906925c3e2979ac2d020d4b3f3b286af459"
-  integrity sha512-3GzufulXUykEqB4/LdQEHuRLlOPqE6XK36gmr85BwBvm9zwkrrOcb8NTtXjUIRfxJRz+Yk4YBSa8Bo84foYXdA==
+"@vercel/functions@^2.2.13":
+  version "2.2.13"
+  resolved "https://registry.yarnpkg.com/@vercel/functions/-/functions-2.2.13.tgz#8b290efb46967cd5e02b366a62176987a765fad5"
+  integrity sha512-14ArBSIIcOBx9nrEgaJb4Bw+en1gl6eSoJWh8qjifLl5G3E4dRXCFOT8HP+w66vb9Wqyd1lAQBrmRhRwOj9X9A==
   dependencies:
-    "@vercel/oidc" "2.0.0"
+    "@vercel/oidc" "2.0.2"
 
-"@vercel/nft@^0.29.2":
-  version "0.29.4"
-  resolved "https://registry.yarnpkg.com/@vercel/nft/-/nft-0.29.4.tgz#e56b07d193776bcf67b31ac4da065ceb8e8d362e"
-  integrity sha512-6lLqMNX3TuycBPABycx7A9F1bHQR7kiQln6abjFbPrf5C/05qHM9M5E4PeTE59c7z8g6vHnx1Ioihb2AQl7BTA==
+"@vercel/nft@^0.30.1":
+  version "0.30.2"
+  resolved "https://registry.yarnpkg.com/@vercel/nft/-/nft-0.30.2.tgz#5584cdc9778abce54827749baa92081e0bd2d723"
+  integrity sha512-pquXF3XZFg/T3TBor08rUhIGgOhdSilbn7WQLVP/aVSSO+25Rs4H/m3nxNDQ2x3znX7Z3yYjryN8xaLwypcwQg==
   dependencies:
     "@mapbox/node-pre-gyp" "^2.0.0"
     "@rollup/pluginutils" "^5.1.3"
@@ -771,12 +776,15 @@
     picomatch "^4.0.2"
     resolve-from "^5.0.0"
 
-"@vercel/oidc@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@vercel/oidc/-/oidc-2.0.0.tgz#28c202c7b78716a6ceabffec06d311a108eb4489"
-  integrity sha512-U0hncpXof7gC9xtmSrjz6vrDqdwJXi8z/zSc9FyS80AoXKfCZtpkBz9gtL3x30Agmpxpwe35P1W2dP9Epa/RGA==
+"@vercel/oidc@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@vercel/oidc/-/oidc-2.0.2.tgz#ca96b3dd690fd6d6f835b6638a9c9d836ed2e228"
+  integrity sha512-59PBFx3T+k5hLTEWa3ggiMpGRz1OVvl9eN8SUai+A43IsqiOuAe7qPBf+cray/Fj6mkgnxm/D7IAtjc8zSHi7g==
+  dependencies:
+    "@types/ms" "2.1.0"
+    ms "2.1.3"
 
-"@vercel/routing-utils@^5.0.4":
+"@vercel/routing-utils@^5.1.1":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@vercel/routing-utils/-/routing-utils-5.1.1.tgz#f4c98d6a13ab96cd03d850306135c4dcff395bd1"
   integrity sha512-EyOik06V2fPXAbKY087BM7DMOQOJK+9mubwwox1TkDi21tMeJcMYwsXwepm6ZmyZ5u0j1TpJW172fP4MbzaCcg==
@@ -1470,6 +1478,11 @@ fdir@^6.4.4:
   version "6.4.6"
   resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.4.6.tgz#2b268c0232697063111bbf3f64810a2a741ba281"
   integrity sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==
+
+fdir@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.5.0.tgz#ed2ab967a331ade62f18d077dae192684d50d350"
+  integrity sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==
 
 file-uri-to-path@1.0.0:
   version "1.0.0"
@@ -2333,7 +2346,7 @@ mrmime@^2.0.1:
   resolved "https://registry.yarnpkg.com/mrmime/-/mrmime-2.0.1.tgz#bc3e87f7987853a54c9850eeb1f1078cd44adddc"
   integrity sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ==
 
-ms@^2.1.3:
+ms@2.1.3, ms@^2.1.3:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
@@ -2514,7 +2527,7 @@ picomatch@^2.0.4, picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-picomatch@^4.0.2:
+picomatch@^4.0.2, picomatch@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-4.0.3.tgz#796c76136d1eead715db1e7bad785dedd695a042"
   integrity sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==
@@ -2971,13 +2984,13 @@ tinyexec@^0.3.2:
   resolved "https://registry.yarnpkg.com/tinyexec/-/tinyexec-0.3.2.tgz#941794e657a85e496577995c6eef66f53f42b3d2"
   integrity sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==
 
-tinyglobby@^0.2.12, tinyglobby@^0.2.13:
-  version "0.2.14"
-  resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.14.tgz#5280b0cf3f972b050e74ae88406c0a6a58f4079d"
-  integrity sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==
+tinyglobby@^0.2.12, tinyglobby@^0.2.13, tinyglobby@^0.2.15:
+  version "0.2.15"
+  resolved "https://registry.yarnpkg.com/tinyglobby/-/tinyglobby-0.2.15.tgz#e228dd1e638cea993d2fdb4fcd2d4602a79951c2"
+  integrity sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==
   dependencies:
-    fdir "^6.4.4"
-    picomatch "^4.0.2"
+    fdir "^6.5.0"
+    picomatch "^4.0.3"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
