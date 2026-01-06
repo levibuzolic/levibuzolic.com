@@ -2,7 +2,7 @@ name: Update Android Device List
 
 on:
   schedule:
-    - cron: "38 * * * *"
+    - cron: "39 * * * *"
 
 jobs:
   update-devices:
@@ -14,7 +14,7 @@ jobs:
 
       - name: Update Android devices list
         run: |
-          touch example.txt
+          curl -sL http://storage.googleapis.com/play_public/supported_devices.csv | iconv -f UTF-16LE -t UTF-8//IGNORE > devices.csv
 
       - name: Set branch name with date
         run: echo "BRANCH_NAME=automated/update-android-devices-$(date +%Y-%m-%d)" >> $GITHUB_ENV
