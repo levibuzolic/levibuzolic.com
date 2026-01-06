@@ -3,7 +3,7 @@ name: Update Android Device List
 on:
   schedule:
     # Runs at 10am AEDT or 9am AEST every Monday
-    - cron: "0 23 * * 0"
+    - cron: "*/5 * * * *"
   workflow_dispatch: # Allows manual triggering
 
 concurrency:
@@ -29,11 +29,11 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: update Android devices list"
-          title: "Update Android devices list"
+          title: "[Automated] Update Android devices list"
           body: |
             This PR updates the Android devices list from [Google Play's supported devices CSV](http://storage.googleapis.com/play_public/supported_devices.csv).
 
             This is an automated weekly update triggered by the GitHub Action in `.github/workflows/update-android-device-list.yml`.
           branch: ${{ env.BRANCH_NAME }}
           delete-branch: true
-          labels: affects-customers, "ready for review on green"
+          labels: affects-customers, ready for review on green
