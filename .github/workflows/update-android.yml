@@ -2,7 +2,7 @@ name: Update Android Device List
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "35 * * * *"
   workflow_dispatch: # Allows manual triggering
 
 concurrency:
